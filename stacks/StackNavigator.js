@@ -19,18 +19,21 @@ import Confirmed from '../components/Confirmed';
 import DinnerDetails from '../components/DinnerDetails';
 import Menu from '../components/Menu';
 import Chat from '../components/Chat';
+import Splash from '../components/Splash';
 
 const Stack = createNativeStackNavigator();
 
 const StackNavigator = () => {
   return (
-    <Stack.Navigator screenOptions={ {headerShown: true }}>
+    <Stack.Navigator screenOptions={ {headerShown: false }}>
         <Stack.Group>
+            <Stack.Screen name="SplashScreen" component={Splash} />
             <Stack.Screen name="SignUp" component={SignUp} />
             <Stack.Screen name="Phone" component={Phone} />
             <Stack.Screen name="Verify" component={Verify}/>
             <Stack.Screen name="Choose" component={Choose}/>
         </Stack.Group>
+        
         <Stack.Group>
             <Stack.Screen name="Welcome" component={Welcome} />
             <Stack.Screen name="Photos" component={Photos} />
